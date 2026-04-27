@@ -29,6 +29,7 @@ import {
 } from "./header-brand";
 import { animate, stagger } from "motion";
 import { initLandingHero } from "./landing-hero";
+import { initLandingFooter } from "./landing-footer";
 import {
   mountYamlEditor,
   lineColumnToOffset,
@@ -228,6 +229,7 @@ function init(): void {
     if (landingRoot) landingRoot.hidden = false;
     if (appRoot) appRoot.hidden = true;
     initLandingHero({ yaml: ukDualPassBYaml, demoMode: demoModeEnabled() });
+    initLandingFooter();
     return;
   }
 

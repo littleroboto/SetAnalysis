@@ -10,7 +10,7 @@
     <div id="landing" class="landing-shell">
       <header class="landing-header">
         <div class="landing-brand">
-          <h1>SetAnalysis Workbench</h1>
+          <h1>SetAnalysis Helper</h1>
           <p class="muted small">
             Technical utility for set-overlap analysis where datasets are similar
             but not identical.
@@ -24,17 +24,25 @@
       <main class="landing-main">
         <section class="landing-hero">
           <div class="landing-copy">
-            <h2>Analyze overlap as structure, not averages</h2>
+            <h2>Find critical differences, not averages</h2>
             <p>
-              SetAnalysis focuses on intersections, concentration, and archetype
-              patterns in high-dimensional set data. It is designed for cases
-              where entities share many common elements but still diverge in
-              meaningful edge combinations.
+              For investigating large collections of records that mostly look
+              alike but aren't quite the same &mdash; store estates, product
+              catalogues, customer profiles, configuration files. Where a
+              headline average smooths the small differences away, this tool
+              lays them out so you can see and compare them directly.
             </p>
             <ul>
-              <li>Single and dual dimension set inputs.</li>
-              <li>Trim controls for high-cardinality intersections.</li>
-              <li>Deterministic SVG export with evidence-first captions.</li>
+              <li>
+                See what your datasets have in common &mdash; and what only one
+                of them does.
+              </li>
+              <li>
+                Hide the long tail so the meaningful overlaps stand out.
+              </li>
+              <li>
+                Export each chart as a clean SVG, ready for reports or decks.
+              </li>
             </ul>
           </div>
           <div class="landing-hero-figure">
@@ -51,6 +59,125 @@
           </p>
         </section>
       </main>
+
+      <footer class="landing-footer">
+        <div class="landing-footer-section">
+          <span class="landing-footer-label">
+            <svg
+              class="landing-footer-icon"
+              width="12"
+              height="12"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path d="M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73z" />
+              <path d="M12 22V12" />
+              <path d="m3.3 7 7.7 4.45a2 2 0 0 0 2 0L20.7 7" />
+              <path d="m7.5 4.27 9 5.15" />
+            </svg>
+            Built with
+          </span>
+          <span class="landing-footer-list">
+            <a
+              href="https://vitejs.dev"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Vite</a
+            >
+            &middot;
+            <a
+              href="https://www.typescriptlang.org"
+              target="_blank"
+              rel="noopener noreferrer"
+              >TypeScript</a
+            >
+            &middot;
+            <a
+              href="https://motion.dev"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Motion</a
+            >
+            &middot;
+            <a
+              href="https://codemirror.net"
+              target="_blank"
+              rel="noopener noreferrer"
+              >CodeMirror&nbsp;6</a
+            >
+            &middot;
+            <a
+              href="https://github.com/nodeca/js-yaml"
+              target="_blank"
+              rel="noopener noreferrer"
+              >js-yaml</a
+            >
+            &middot;
+            <a
+              href="https://github.com/HatScripts/circle-flags"
+              target="_blank"
+              rel="noopener noreferrer"
+              >circle-flags</a
+            >
+          </span>
+        </div>
+        <div class="landing-footer-section">
+          <span class="landing-footer-label">
+            <svg
+              class="landing-footer-icon"
+              width="12"
+              height="12"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path
+                d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"
+              />
+            </svg>
+            Hand Rolled by Doug B.
+          </span>
+          <span class="landing-footer-list">
+            SVG UpSet renderer &middot; YAML parsing &amp; validation &middot; trim
+            / sort / export controls &middot; hero choreography &middot; synthetic
+            sample generators
+          </span>
+        </div>
+        <div class="landing-footer-section">
+          <span class="landing-footer-label">
+            <svg
+              class="landing-footer-icon"
+              width="12"
+              height="12"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <circle cx="12" cy="12" r="3" />
+              <line x1="3" x2="9" y1="12" y2="12" />
+              <line x1="15" x2="21" y1="12" y2="12" />
+            </svg>
+            Latest
+          </span>
+          <span
+            class="landing-footer-list"
+            id="landing-footer-commit"
+          ></span>
+        </div>
+      </footer>
     </div>
 
     <div id="app" hidden>
