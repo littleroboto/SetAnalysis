@@ -70,14 +70,14 @@ export function mountControls(
     "topNSets",
     0,
     9999,
-    "Primary legibility dial when k is large: caps matrix height. 0 = every distinct set; else keep the N largest by store count; remainder folds into the legend residual.",
+    "Primary legibility dial when k is large: caps matrix height. Defaults to 20 (largest by store count); set 0 to show every distinct set. Remainder folds into the legend residual.",
   );
   numberRow(
     "Top-N intersections (columns)",
     "topNCombinations",
     0,
     99999,
-    "Secondary to set trim for most readouts: caps intersection columns before Other. 0 = all combinations after filters below.",
+    "Secondary to set trim for most readouts: caps intersection columns before Other. Defaults to 20; set 0 to show all combinations after the filters below.",
   );
   numberRow(
     "Min intersection size",

@@ -85,10 +85,15 @@ export interface RenderOptions {
   sortMode: SortMode;
 }
 
+/**
+ * 20 rows × 20 columns is the default trim: it keeps even very wide estate
+ * extracts legible on first paint while still surfacing the bundle long tail
+ * via the rollup. Set either to 0 in the controls to remove the cap.
+ */
 export const DEFAULT_RENDER_OPTIONS: RenderOptions = {
-  topNSets: 0,
+  topNSets: 20,
   minCombinationSize: 1,
-  topNCombinations: 0,
+  topNCombinations: 20,
   otherRollup: true,
   hideEmptyIntersection: true,
   sortMode: "size_desc",
