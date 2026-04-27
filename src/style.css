@@ -326,6 +326,11 @@ body {
   flex-wrap: wrap;
   font-size: 12px;
 }
+/* The picker carries explicit flex sizing, so an `hidden` attribute alone
+   doesn't suppress it. Force the UA default. */
+.sample-row > [hidden] {
+  display: none;
+}
 .sample-row label {
   color: var(--muted);
 }

@@ -20,6 +20,7 @@ import { downloadSvg } from "./export";
 import {
   DEFAULT_RENDER_OPTIONS,
   type ParseResult,
+  type ParsedInput,
   type RenderOptions,
 } from "./types";
 import {
@@ -123,6 +124,17 @@ function llmQueryEnabled(): boolean {
 function workbenchViewEnabled(): boolean {
   const params = new URLSearchParams(window.location.search);
   return params.get("view") === "workbench";
+}
+
+/**
+ * Demo mode (`?demo=1`) gates the bundled synthetic samples. Without it the
+ * sample picker is hidden, the editor opens empty, and the landing hero
+ * renders with anonymised set labels (Menu #1, Menu #2, …) and no flag /
+ * market header — so the page can be shared without leaking demo data shape.
+ */
+function demoModeEnabled(): boolean {
+  const params = new URLSearchParams(window.location.search);
+  return params.get("demo") === "1";
 }
 
 function buildWorkbenchHref(): string {
@@ -307,19 +319,42 @@ function init(): void {
     requestAnimationFrame(() => editor.view.requestMeasure());
   });
 
+  const demoMode = demoModeEnabled();
+
   const customOpt = document.createElement("option");
   customOpt.value = "__custom__";
   customOpt.textContent = "\u2014 custom \u2014";
   samplePicker.appendChild(customOpt);
-  for (const s of SAMPLES) {
-    const opt = document.createElement("option");
-    opt.value = s.id;
-    opt.textContent = s.label;
-    samplePicker.appendChild(opt);
+  if (demoMode) {
+    for (const s of SAMPLES) {
+      const opt = document.createElement("option");
+      opt.value = s.id;
+      opt.textContent = s.label;
+      samplePicker.appendChild(opt);
+    }
+  } else {
+    // No demo mode: hide the picker (label + dropdown) so the workbench has
+    // no synthetic data on offer; the "Load file…" button stays visible so
+    // users can bring their own YAML.
+    const pickerLabel = document.querySelector<HTMLLabelElement>(
+      'label[for="sample-picker"]',
+    );
+    if (pickerLabel) pickerLabel.hidden = true;
+    samplePicker.hidden = true;
   }
-  // Initial body: storage > first sample. Computed before mounting so CM6 has
-  // its document on first paint.
-  const initialBody = readStorage() ?? SAMPLES[0].body;
+
+  // Initial body: in demo mode prefer non-empty storage > first sample.
+  // Without demo, start from storage but never restore a body that happens to
+  // equal one of the bundled samples (a previous demo-mode session may have
+  // persisted it), so a non-demo URL really shows no demo data. Empty / blank
+  // storage is treated as "no stored content" in either mode.
+  const storedRaw = readStorage();
+  const stored = storedRaw && storedRaw.trim() !== "" ? storedRaw : null;
+  const storedIsSample =
+    stored != null && SAMPLES.some((s) => s.body === stored);
+  const initialBody = demoMode
+    ? (stored ?? SAMPLES[0].body)
+    : (stored != null && !storedIsSample ? stored : "");
 
   const editor: YamlEditorHandle = mountYamlEditor(yamlHost, {
     initial: initialBody,
@@ -729,6 +764,40 @@ function prefersReducedMotion(): boolean {
   return window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 }
 
+/**
+ * Build a hero-only ParsedInput where each original set name is replaced with
+ * "Menu #1" (largest), "Menu #2", … and the meta is scrubbed of market /
+ * source identifiers. Caller still strips the figure-header from the rendered
+ * SVG so no market chrome leaks into the visual.
+ */
+function anonymiseHeroInput(src: ParsedInput): ParsedInput {
+  const counts = new Map<string, number>();
+  for (const el of src.elements) {
+    for (const s of el.sets) {
+      counts.set(s, (counts.get(s) ?? 0) + 1);
+    }
+  }
+  const ranked = Array.from(counts.entries())
+    .sort((a, b) => b[1] - a[1] || (a[0] < b[0] ? -1 : 1))
+    .map(([name], i) => [name, `Menu #${i + 1}`] as const);
+  const rename = new Map(ranked);
+
+  return {
+    meta: {
+      market: "Demo",
+      snapshot: src.meta.snapshot,
+      dimension: src.meta.dimension,
+      source: "synthetic",
+      evidence: src.meta.evidence,
+    },
+    elements: src.elements.map((el) => ({
+      id: el.id,
+      sets: el.sets.map((s) => rename.get(s) ?? s),
+      attrs: el.attrs,
+    })),
+  };
+}
+
 function initLandingHero(): void {
   const host = document.getElementById("landing-hero-chart");
   if (!host) return;
@@ -741,9 +810,15 @@ function initLandingHero(): void {
     return;
   }
 
-  const input =
+  const rawInput =
     parsed.kind === "dual" ? parsed.menuSets : parsed.kind === "single" ? parsed.parsed : undefined;
-  if (!input) return;
+  if (!rawInput) return;
+
+  // Without demo mode, anonymise the data shape so the hero illustrates the
+  // *visual idea* of UpSet without leaking the bundled estate names. We rank
+  // sets by occurrence and rename them Menu #1 (largest) … Menu #N.
+  const demoMode = demoModeEnabled();
+  const input = demoMode ? rawInput : anonymiseHeroInput(rawInput);
 
   const summary = extractCombinations(input.elements);
   const heroOptions: RenderOptions = {
@@ -763,6 +838,12 @@ function initLandingHero(): void {
     summary,
     heroOptions,
   );
+
+  if (!demoMode) {
+    // Strip the figure header (flag + "Market · dimension") so the hero shows
+    // only the bars / dots / labels — no market identification.
+    result.svg.querySelectorAll(".figure-header").forEach((g) => g.remove());
+  }
   result.svg.removeAttribute("width");
   result.svg.removeAttribute("height");
   result.svg.setAttribute("preserveAspectRatio", "xMidYMid meet");
