@@ -43,7 +43,7 @@ interface HeroDemoTarget {
 
 /**
  * Build a hero-only ParsedInput where each original set name is replaced
- * with a numbered placeholder ("Menu #1" for menu-set inputs, "Feature #1"
+ * with a numbered placeholder ("MenuSet-1" for menu-set inputs, "Feature-1"
  * for feature/parameter inputs) ranked by occurrence (largest first), and
  * each element ID is replaced with "Store #N" in YAML appearance order so
  * the demo panel can list IDs without leaking the synthetic source values.
@@ -55,7 +55,7 @@ export function anonymiseHeroInput(src: ParsedInput): ParsedInput {
   const labelPrefix =
     src.meta.dimension === "features" || src.meta.dimension === "parameters"
       ? "Feature"
-      : "Menu";
+      : "MenuSet";
 
   const counts = new Map<string, number>();
   for (const el of src.elements) {
@@ -65,7 +65,7 @@ export function anonymiseHeroInput(src: ParsedInput): ParsedInput {
   }
   const ranked = Array.from(counts.entries())
     .sort((a, b) => b[1] - a[1] || (a[0] < b[0] ? -1 : 1))
-    .map(([name], i) => [name, `${labelPrefix} #${i + 1}`] as const);
+    .map(([name], i) => [name, `${labelPrefix}-${i + 1}`] as const);
   const renameSet = new Map(ranked);
 
   return {

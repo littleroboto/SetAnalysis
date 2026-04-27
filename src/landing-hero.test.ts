@@ -29,10 +29,10 @@ describe("anonymiseHeroInput", () => {
     // Breakfast appears 3 times, Grill 3, McCafe 2. With ties broken by name
     // ascending, Breakfast (B) < Grill (G), so Breakfast wins #1.
     expect(out.elements.map((e) => e.sets)).toEqual([
-      ["Menu #1", "Menu #2"],
-      ["Menu #1"],
-      ["Menu #2", "Menu #3"],
-      ["Menu #1", "Menu #2", "Menu #3"],
+      ["MenuSet-1", "MenuSet-2"],
+      ["MenuSet-1"],
+      ["MenuSet-2", "MenuSet-3"],
+      ["MenuSet-1", "MenuSet-2", "MenuSet-3"],
     ]);
 
     expect(out.elements.map((e) => e.id)).toEqual([
@@ -47,7 +47,7 @@ describe("anonymiseHeroInput", () => {
     const src = buildInput();
     src.meta.dimension = "features";
     const out = anonymiseHeroInput(src);
-    expect(out.elements[0].sets).toEqual(["Feature #1", "Feature #2"]);
+    expect(out.elements[0].sets).toEqual(["Feature-1", "Feature-2"]);
   });
 
   it("preserves attrs unchanged on each element", () => {
