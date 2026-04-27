@@ -3,20 +3,33 @@
 // The "Latest" stamp is populated from build-time git constants baked in
 // by `vite.config.ts` (`define`). Dev server: refreshed on each restart;
 // production: refreshed on each `vite build`. We render `<short-sha> ·
-// <subject> · <relative-time>` with the SHA linking to the commit on
-// GitHub.
+// <subject> · <relative-time>`. In demo mode (`?demo=1`) the SHA chip
+// links to the commit on GitHub and any `github.com` links elsewhere in
+// the footer are kept; outside demo mode we render the SHA as plain text
+// and strip GitHub-pointing anchors so the public landing doesn't
+// actively invite traffic into the source repo.
 
 const REPO_COMMIT_BASE = "https://github.com/littleroboto/SetAnalysis/commit/";
 
 /** Truncate a commit subject so the footer stays on a sensible width. */
 const SUBJECT_MAX_CH = 72;
 
+interface FooterOptions {
+  /** When false, GitHub links in the footer are demoted to plain text. */
+  demoMode: boolean;
+}
+
 /**
- * Fill in `#landing-footer-commit`. No-op if either the host element is
+ * Fill in `#landing-footer-commit` and gate any `github.com` links in
+ * `.landing-footer` on `demoMode`. No-op if either the host element is
  * missing (workbench view) or git constants weren't injected (e.g.
  * unknown sha from a tarball install).
  */
-export function initLandingFooter(): void {
+export function initLandingFooter(opts: FooterOptions = { demoMode: false }): void {
+  if (!opts.demoMode) {
+    demoteGithubLinks();
+  }
+
   const host = document.getElementById("landing-footer-commit");
   if (!host) return;
 
@@ -29,16 +42,19 @@ export function initLandingFooter(): void {
     return;
   }
 
-  // SHA chip linking to the commit on GitHub.
-  const shaLink = document.createElement("a");
-  shaLink.href = `${REPO_COMMIT_BASE}${sha}`;
-  shaLink.target = "_blank";
-  shaLink.rel = "noopener noreferrer";
+  // SHA chip: a real link in demo mode, a plain code chip otherwise.
   const shaCode = document.createElement("code");
   shaCode.textContent = sha;
-  shaLink.appendChild(shaCode);
-
-  host.replaceChildren(shaLink);
+  if (opts.demoMode) {
+    const shaLink = document.createElement("a");
+    shaLink.href = `${REPO_COMMIT_BASE}${sha}`;
+    shaLink.target = "_blank";
+    shaLink.rel = "noopener noreferrer";
+    shaLink.appendChild(shaCode);
+    host.replaceChildren(shaLink);
+  } else {
+    host.replaceChildren(shaCode);
+  }
 
   if (subject) {
     host.append(" \u00b7 ");
@@ -66,6 +82,25 @@ export function initLandingFooter(): void {
 function truncate(s: string, max: number): string {
   if (s.length <= max) return s;
   return `${s.slice(0, max - 1).trimEnd()}\u2026`;
+}
+
+/**
+ * Convert any `github.com` anchor inside `.landing-footer` into a plain
+ * `<span>` carrying the same text. We do this in JS rather than CSS so
+ * the link href can't leak via copy-link / right-click / hover preview.
+ */
+function demoteGithubLinks(): void {
+  const footer = document.querySelector(".landing-footer");
+  if (!footer) return;
+  const anchors = footer.querySelectorAll<HTMLAnchorElement>(
+    "a[href*='github.com']",
+  );
+  for (const a of anchors) {
+    const span = document.createElement("span");
+    span.className = a.className;
+    span.append(...Array.from(a.childNodes));
+    a.replaceWith(span);
+  }
 }
 
 /**

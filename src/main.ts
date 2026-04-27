@@ -228,8 +228,9 @@ function init(): void {
   if (!workbenchViewEnabled()) {
     if (landingRoot) landingRoot.hidden = false;
     if (appRoot) appRoot.hidden = true;
-    initLandingHero({ yaml: ukDualPassBYaml, demoMode: demoModeEnabled() });
-    initLandingFooter();
+    const demoMode = demoModeEnabled();
+    initLandingHero({ yaml: ukDualPassBYaml, demoMode });
+    initLandingFooter({ demoMode });
     return;
   }
 
