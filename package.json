@@ -22,7 +22,8 @@
     "gen:nl-dual-passb": "tsx src/samples/_generators/nl_dual_passb.ts"
   },
   "dependencies": {
-    "js-yaml": "^4.1.1"
+    "js-yaml": "^4.1.1",
+    "motion": "^12.38.0"
   },
   "devDependencies": {
     "@types/js-yaml": "^4.0.9",

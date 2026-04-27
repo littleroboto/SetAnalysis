@@ -3,11 +3,60 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>RFM UpSet workbench</title>
+    <title>SetAnalysis Workbench</title>
     <link rel="icon" href="data:," />
   </head>
   <body>
-    <div id="app">
+    <div id="landing" class="landing-shell">
+      <header class="landing-header">
+        <div class="landing-brand">
+          <h1>SetAnalysis Workbench</h1>
+          <p class="muted small">
+            Technical utility for set-overlap analysis where datasets are similar
+            but not identical.
+          </p>
+        </div>
+        <a id="open-workbench-link-top" class="landing-cta" href="?view=workbench"
+          >Open Workbench</a
+        >
+      </header>
+
+      <main class="landing-main">
+        <section class="landing-hero">
+          <div class="landing-copy">
+            <h2>Analyze overlap as structure, not averages</h2>
+            <p>
+              SetAnalysis focuses on intersections, concentration, and archetype
+              patterns in high-dimensional set data. It is designed for cases
+              where entities share many common elements but still diverge in
+              meaningful edge combinations.
+            </p>
+            <ul>
+              <li>Single and dual dimension set inputs.</li>
+              <li>Trim controls for high-cardinality intersections.</li>
+              <li>Deterministic SVG export with evidence-first captions.</li>
+            </ul>
+            <a id="open-workbench-link-main" class="landing-cta" href="?view=workbench"
+              >Open Workbench</a
+            >
+          </div>
+          <div class="landing-hero-figure">
+            <div id="landing-hero-chart" class="landing-hero-chart"></div>
+          </div>
+        </section>
+
+        <section class="landing-notes">
+          <h3>Operational notes</h3>
+          <p>
+            This utility runs fully client-side. Input data stays in-browser. The
+            optional BYOK analysis controls are hidden unless explicitly enabled
+            via query parameter.
+          </p>
+        </section>
+      </main>
+    </div>
+
+    <div id="app" hidden>
       <header class="app-header">
         <div class="header-brand">
           <div class="header-flag-wrap" id="header-flag-wrap" hidden>
@@ -21,17 +70,20 @@
             />
           </div>
           <div class="header-titles">
-            <h1 id="header-title">RFM UpSet workbench</h1>
+            <h1 id="header-title">SetAnalysis Workbench</h1>
             <p id="header-market-line" class="header-market-line" hidden></p>
             <p class="subtitle">
               Phase 1 visual workbench &mdash; paste estate-shaped YAML, see the
               marginal vs bundle picture (dual YAML: two charts stacked vertically).
-              Static site, no data leaves the browser. See
-              <code>analysis/PROMPT-build-upset-workbench.md</code>.
+              Static site, no data leaves the browser.
             </p>
           </div>
         </div>
         <div class="header-links">
+          <a id="back-to-landing-link" href="./">Overview</a>
+          <button id="llm-open-btn" type="button" class="llm-btn" hidden>
+            BYOK analysis
+          </button>
           <a
             href="https://github.com/"
             target="_blank"
@@ -126,6 +178,44 @@
         >
       </footer>
     </div>
+
+    <dialog id="llm-modal" class="llm-modal">
+      <form method="dialog" class="llm-form">
+        <header class="llm-header">
+          <h2>BYOK analysis</h2>
+          <button id="llm-close-btn" type="submit" class="llm-close-btn">
+            Close
+          </button>
+        </header>
+        <p class="muted small">
+          Hidden unless URL contains <code>?llm=1</code>. BYOK calls are not wired
+          yet; this preview shows the project-aware context that would be sent.
+        </p>
+        <div class="llm-controls">
+          <label for="llm-provider">Provider label</label>
+          <input
+            id="llm-provider"
+            type="text"
+            value="openai-compatible"
+            autocomplete="off"
+          />
+        </div>
+        <div class="llm-controls">
+          <label for="llm-context-preview">Context preview</label>
+          <textarea
+            id="llm-context-preview"
+            rows="12"
+            readonly
+            spellcheck="false"
+          ></textarea>
+        </div>
+        <menu class="llm-actions">
+          <button id="llm-refresh-btn" value="default" type="button">
+            Refresh preview
+          </button>
+        </menu>
+      </form>
+    </dialog>
 
     <script type="module" src="/src/main.ts"></script>
   </body>

@@ -27,6 +27,7 @@ import {
   formatDimensionLabel,
   syncHeaderBrand,
 } from "./header-brand";
+import { animate, inView, stagger } from "motion";
 
 interface SampleEntry {
   id: string;
@@ -108,6 +109,83 @@ const state: AppState = {
   options: { ...DEFAULT_RENDER_OPTIONS },
 };
 
+function llmQueryEnabled(): boolean {
+  const params = new URLSearchParams(window.location.search);
+  return params.get("llm") === "1";
+}
+
+function workbenchViewEnabled(): boolean {
+  const params = new URLSearchParams(window.location.search);
+  return params.get("view") === "workbench";
+}
+
+function buildWorkbenchHref(): string {
+  const url = new URL(window.location.href);
+  url.searchParams.set("view", "workbench");
+  return `${url.pathname}${url.search}${url.hash}`;
+}
+
+function buildLandingHref(): string {
+  const url = new URL(window.location.href);
+  url.searchParams.delete("view");
+  return `${url.pathname}${url.search}${url.hash}`;
+}
+
+function buildLlmContextPreview(pr: ParseResult | undefined): string {
+  const framing = {
+    purpose: "variance discovery, not remediation",
+    phases: ["catalog surface", "store assignment", "derived residue and concentration"],
+    evidence_grades: ["output_only", "input_config", "inferred", "SME_confirmed"],
+    caveat: "single-store package evidence is not estate-wide truth",
+  };
+
+  if (!pr) {
+    return JSON.stringify(
+      {
+        framing,
+        status: "No parsed YAML loaded",
+      },
+      null,
+      2,
+    );
+  }
+
+  if (pr.kind === "single") {
+    return JSON.stringify(
+      {
+        framing,
+        kind: "single",
+        meta: pr.parsed.meta,
+        summary: {
+          element_count: pr.parsed.elements.length,
+          distinct_sets: new Set(pr.parsed.elements.flatMap((e) => e.sets)).size,
+        },
+      },
+      null,
+      2,
+    );
+  }
+
+  return JSON.stringify(
+    {
+      framing,
+      kind: "dual",
+      menu_sets: {
+        meta: pr.menuSets.meta,
+        element_count: pr.menuSets.elements.length,
+        distinct_sets: new Set(pr.menuSets.elements.flatMap((e) => e.sets)).size,
+      },
+      features: {
+        meta: pr.parameters.meta,
+        element_count: pr.parameters.elements.length,
+        distinct_sets: new Set(pr.parameters.elements.flatMap((e) => e.sets)).size,
+      },
+    },
+    null,
+    2,
+  );
+}
+
 function $(id: string): HTMLElement {
   const el = document.getElementById(id);
   if (!el) throw new Error(`Missing element: #${id}`);
@@ -115,6 +193,33 @@ function $(id: string): HTMLElement {
 }
 
 function init(): void {
+  const landingRoot = document.getElementById("landing");
+  const appRoot = document.getElementById("app");
+  const openWorkbenchTop = document.getElementById("open-workbench-link-top") as
+    | HTMLAnchorElement
+    | null;
+  const openWorkbenchMain = document.getElementById("open-workbench-link-main") as
+    | HTMLAnchorElement
+    | null;
+  const backToLanding = document.getElementById("back-to-landing-link") as
+    | HTMLAnchorElement
+    | null;
+
+  const workbenchHref = buildWorkbenchHref();
+  if (openWorkbenchTop) openWorkbenchTop.href = workbenchHref;
+  if (openWorkbenchMain) openWorkbenchMain.href = workbenchHref;
+  if (backToLanding) backToLanding.href = buildLandingHref();
+
+  if (!workbenchViewEnabled()) {
+    if (landingRoot) landingRoot.hidden = false;
+    if (appRoot) appRoot.hidden = true;
+    initLandingHero();
+    return;
+  }
+
+  if (landingRoot) landingRoot.hidden = true;
+  if (appRoot) appRoot.hidden = false;
+
   const yamlInput = $("yaml-input") as HTMLTextAreaElement;
   const banner = $("parse-banner");
   const plotStack = $("plot-stack");
@@ -131,9 +236,34 @@ function init(): void {
   const inspectorMeta = $("selection-meta");
   const inspectorStoreList = $("selection-store-list");
   const inspectorCopyBtn = $("selection-copy") as HTMLButtonElement;
+  const llmOpenBtn = document.getElementById("llm-open-btn") as
+    | HTMLButtonElement
+    | null;
+  const llmModal = document.getElementById("llm-modal") as HTMLDialogElement | null;
+  const llmRefreshBtn = document.getElementById("llm-refresh-btn") as
+    | HTMLButtonElement
+    | null;
+  const llmContextPreview = document.getElementById("llm-context-preview") as
+    | HTMLTextAreaElement
+    | null;
 
   bindHeaderFlagErrorHandler();
   let selectedStoreIds: string[] = [];
+
+  if (llmQueryEnabled() && llmOpenBtn && llmModal && llmRefreshBtn && llmContextPreview) {
+    llmOpenBtn.hidden = false;
+    const syncLlmPreview = () => {
+      llmContextPreview.value = buildLlmContextPreview(state.parseResult);
+    };
+    llmOpenBtn.addEventListener("click", () => {
+      syncLlmPreview();
+      llmModal.showModal();
+    });
+    llmRefreshBtn.addEventListener("click", () => {
+      syncLlmPreview();
+    });
+    syncLlmPreview();
+  }
 
   inspectorCopyBtn.addEventListener("click", async () => {
     if (selectedStoreIds.length === 0) return;
@@ -405,6 +535,88 @@ function init(): void {
     }
     captionStrip.appendChild(capParams);
   }
+}
+
+function initLandingHero(): void {
+  const host = document.getElementById("landing-hero-chart");
+  if (!host) return;
+  host.replaceChildren();
+
+  let parsed: ParseResult;
+  try {
+    parsed = parseInput(ukDualPassBYaml);
+  } catch {
+    return;
+  }
+
+  const input =
+    parsed.kind === "dual" ? parsed.menuSets : parsed.kind === "single" ? parsed.parsed : undefined;
+  if (!input) return;
+
+  const summary = extractCombinations(input.elements);
+  const heroOptions: RenderOptions = {
+    ...DEFAULT_RENDER_OPTIONS,
+    topNSets: 8,
+    topNCombinations: 14,
+    minCombinationSize: 8,
+    otherRollup: true,
+    hideEmptyIntersection: true,
+    sortMode: "size_desc",
+  };
+
+  const result = renderUpset(
+    host,
+    input.meta,
+    input.elements.length,
+    summary,
+    heroOptions,
+  );
+  result.svg.removeAttribute("width");
+  result.svg.removeAttribute("height");
+  result.svg.setAttribute("preserveAspectRatio", "xMidYMid meet");
+
+  const topBars = Array.from(
+    result.svg.querySelectorAll<SVGElement>(".combo-bar"),
+  );
+  const setBars = Array.from(
+    result.svg.querySelectorAll<SVGElement>(".set-bar"),
+  );
+  const onDots = Array.from(
+    result.svg.querySelectorAll<SVGElement>(".dot-on"),
+  );
+
+  // Set transform-origins inline so transforms scale from a sensible anchor;
+  // initial opacity is held to 0 via .is-prereveal until inView fires.
+  topBars.forEach((el) => {
+    el.style.transformOrigin = "50% 100%";
+  });
+  setBars.forEach((el) => {
+    el.style.transformOrigin = "100% 50%";
+  });
+  host.classList.add("is-prereveal");
+
+  inView(host, () => {
+    host.classList.remove("is-prereveal");
+    animate(
+      topBars,
+      { opacity: [0, 1], scaleY: [0.05, 1] },
+      { duration: 0.75, ease: "easeOut", delay: stagger(0.02) },
+    );
+    animate(
+      setBars,
+      { opacity: [0, 1], scaleX: [0.08, 1] },
+      { duration: 0.7, ease: "easeOut", delay: stagger(0.015) },
+    );
+    animate(
+      onDots,
+      { opacity: [0, 1], scale: [0.25, 1] },
+      {
+        duration: 0.45,
+        ease: "easeOut",
+        delay: stagger(0.003, { startDelay: 0.2 }),
+      },
+    );
+  });
 }
 
 function flashBanner(

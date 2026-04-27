@@ -57,7 +57,7 @@ export function syncHeaderBrand(pr: ParseResult | undefined): void {
     img.alt = "";
     marketLine.textContent = "";
     marketLine.hidden = true;
-    document.title = "RFM UpSet workbench";
+    document.title = "SetAnalysis Workbench";
     return;
   }
 
@@ -68,7 +68,7 @@ export function syncHeaderBrand(pr: ParseResult | undefined): void {
   img.alt = `${market} (${code.toUpperCase()})`;
   marketLine.textContent = `${market} · ${formatDimensionLabel(dimensionLabel)}`;
   marketLine.hidden = false;
-  document.title = `RFM UpSet · ${market}`;
+  document.title = `SetAnalysis Workbench · ${market}`;
 }
 
 /** Hide the flag chip if the CDN image fails (offline / blocked). */
