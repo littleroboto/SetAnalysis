@@ -28,6 +28,12 @@ import {
   syncHeaderBrand,
 } from "./header-brand";
 import { animate, inView, stagger } from "motion";
+import {
+  mountYamlEditor,
+  lineColumnToOffset,
+  type YamlEditorHandle,
+  type Diagnostic,
+} from "./yaml-editor";
 
 interface SampleEntry {
   id: string;
@@ -220,7 +226,7 @@ function init(): void {
   if (landingRoot) landingRoot.hidden = true;
   if (appRoot) appRoot.hidden = false;
 
-  const yamlInput = $("yaml-input") as HTMLTextAreaElement;
+  const yamlHost = $("yaml-input-host");
   const banner = $("parse-banner");
   const plotStack = $("plot-stack");
   const captionStrip = $("caption-strip");
@@ -231,7 +237,9 @@ function init(): void {
   const downloadMenuBtn = $("download-svg-menu") as HTMLButtonElement;
   const downloadParamsBtn = $("download-svg-params") as HTMLButtonElement;
   const controlsHost = $("controls-grid");
-  const inspector = $("selection-inspector") as HTMLDetailsElement;
+  const inspector = $("selection-inspector") as HTMLElement;
+  const inspectorToggle = $("selection-toggle") as HTMLButtonElement;
+  const inspectorBody = $("selection-body") as HTMLElement;
   const inspectorSummary = $("selection-summary");
   const inspectorMeta = $("selection-meta");
   const inspectorStoreList = $("selection-store-list");
@@ -270,16 +278,15 @@ function init(): void {
     const payload = selectedStoreIds.join("\n");
     try {
       await navigator.clipboard.writeText(payload);
-      inspectorCopyBtn.textContent = "Copied";
-      window.setTimeout(() => {
-        inspectorCopyBtn.textContent = "Copy store IDs";
-      }, 900);
+      flashCopySuccess(inspectorCopyBtn, "Copied");
     } catch {
-      inspectorCopyBtn.textContent = "Copy failed";
-      window.setTimeout(() => {
-        inspectorCopyBtn.textContent = "Copy store IDs";
-      }, 1200);
+      flashCopySuccess(inspectorCopyBtn, "Copy failed", true);
     }
+  });
+
+  inspectorToggle.addEventListener("click", () => {
+    const isOpen = inspector.dataset.open === "true";
+    setInspectorOpen(!isOpen);
   });
 
   const customOpt = document.createElement("option");
@@ -292,11 +299,24 @@ function init(): void {
     opt.textContent = s.label;
     samplePicker.appendChild(opt);
   }
+  // Initial body: storage > first sample. Computed before mounting so CM6 has
+  // its document on first paint.
+  const initialBody = readStorage() ?? SAMPLES[0].body;
+
+  const editor: YamlEditorHandle = mountYamlEditor(yamlHost, {
+    initial: initialBody,
+    onChange: (text) => {
+      reparseAndRender(text);
+      const matchingSample = SAMPLES.find((s) => s.body === text);
+      samplePicker.value = matchingSample ? matchingSample.id : "__custom__";
+    },
+  });
+
   samplePicker.addEventListener("change", () => {
     const s = SAMPLES.find((x) => x.id === samplePicker.value);
     if (s) {
-      yamlInput.value = s.body;
-      reparseAndRender();
+      editor.setValue(s.body);
+      // Set value triggers onChange, which reparses + re-renders.
     }
   });
 
@@ -305,13 +325,8 @@ function init(): void {
     const file = fileInput.files?.[0];
     if (!file) return;
     const text = await file.text();
-    yamlInput.value = text;
-    reparseAndRender();
+    editor.setValue(text);
     fileInput.value = "";
-  });
-
-  yamlInput.addEventListener("input", () => {
-    reparseAndRender();
   });
 
   mountControls(controlsHost, state.options, (next) => {
@@ -340,27 +355,19 @@ function init(): void {
     downloadSvg(state.lastSvgParams, state.parseResult.parameters.meta);
   });
 
-  const restored = readStorage();
-  if (restored) {
-    yamlInput.value = restored;
-    const matchingSample = SAMPLES.find((s) => s.body === restored);
-    samplePicker.value = matchingSample ? matchingSample.id : "__custom__";
-  } else {
-    yamlInput.value = SAMPLES[0].body;
-    samplePicker.value = SAMPLES[0].id;
-  }
-  reparseAndRender();
+  // Sync sample-picker label for the seeded body, then run the first parse.
+  const initialSample = SAMPLES.find((s) => s.body === initialBody);
+  samplePicker.value = initialSample ? initialSample.id : "__custom__";
+  reparseAndRender(initialBody);
 
-  yamlInput.addEventListener("input", () => {
-    const matchingSample = SAMPLES.find((s) => s.body === yamlInput.value);
-    samplePicker.value = matchingSample ? matchingSample.id : "__custom__";
-  });
+  // Page-load choreography. Honours prefers-reduced-motion.
+  runWorkbenchEntryAnimation();
 
-  function reparseAndRender(): void {
-    const text = yamlInput.value;
+  function reparseAndRender(text: string): void {
     writeStorage(text);
     if (text.trim() === "") {
       banner.hidden = true;
+      editor.setDiagnostics([]);
       plotStack.replaceChildren();
       captionStrip.replaceChildren();
       state.parseResult = undefined;
@@ -378,6 +385,7 @@ function init(): void {
       syncHeaderBrand(parsed);
       banner.hidden = true;
       banner.textContent = "";
+      editor.setDiagnostics([]);
       rerender();
     } catch (err) {
       const msg =
@@ -387,6 +395,9 @@ function init(): void {
             ? err.message
             : String(err);
       flashBanner(banner, msg, "error");
+      // Surface the error inline as a CM6 diagnostic when we know the position.
+      const diagnostic = parseErrorToDiagnostic(err, text);
+      editor.setDiagnostics(diagnostic ? [diagnostic] : []);
       state.parseResult = undefined;
       state.lastSvgSingle = undefined;
       state.lastSvgMenu = undefined;
@@ -399,14 +410,99 @@ function init(): void {
     }
   }
 
+  function parseErrorToDiagnostic(
+    err: unknown,
+    _text: string,
+  ): Diagnostic | null {
+    if (!(err instanceof ParseError)) return null;
+    const pos = err.position;
+    const editorState = editor.view.state;
+    if (!pos) {
+      // Schema-level error without a YAML mark: pin to start of doc so a gutter
+      // marker still appears even though we can't be more precise.
+      return {
+        from: 0,
+        to: Math.min(editorState.doc.length, editorState.doc.line(1).length),
+        severity: "error",
+        message: err.message,
+        source: "SetAnalysis",
+      };
+    }
+    const offset = lineColumnToOffset(editorState, pos.line, pos.column);
+    // Highlight the line containing the offset for visibility.
+    const line = editorState.doc.lineAt(offset);
+    return {
+      from: line.from,
+      to: line.to,
+      severity: "error",
+      message: err.message,
+      source: "SetAnalysis",
+    };
+  }
+
   function clearSelectionInspector(): void {
     selectedStoreIds = [];
     inspector.hidden = true;
-    inspector.open = false;
+    inspector.dataset.open = "false";
+    inspectorBody.style.height = "";
     inspectorSummary.textContent = "Selection inspector";
     inspectorMeta.textContent = "";
     inspectorStoreList.textContent = "";
     inspectorCopyBtn.textContent = "Copy store IDs";
+    inspectorCopyBtn.classList.remove("is-flash-success", "is-flash-error");
+  }
+
+  function setInspectorOpen(open: boolean, animateTransition = true): void {
+    const next = open ? "true" : "false";
+    if (inspector.dataset.open === next) return;
+    inspector.dataset.open = next;
+    inspectorToggle.setAttribute("aria-expanded", next);
+
+    if (!animateTransition || prefersReducedMotion()) {
+      inspectorBody.style.height = open ? "auto" : "0px";
+      inspectorBody.style.opacity = open ? "1" : "0";
+      return;
+    }
+
+    const start = inspectorBody.getBoundingClientRect().height;
+    inspectorBody.style.height = `${start}px`;
+    // Force layout so the next height change animates.
+    void inspectorBody.offsetHeight;
+    if (open) {
+      inspectorBody.style.height = "auto";
+      const target = inspectorBody.getBoundingClientRect().height;
+      inspectorBody.style.height = `${start}px`;
+      void inspectorBody.offsetHeight;
+      animate(
+        inspectorBody,
+        { height: [`${start}px`, `${target}px`], opacity: [0.4, 1] },
+        { duration: 0.22, ease: [0.2, 0.7, 0.2, 1] },
+      ).finished.then(() => {
+        if (inspector.dataset.open === "true") {
+          inspectorBody.style.height = "auto";
+        }
+      });
+    } else {
+      animate(
+        inspectorBody,
+        { height: [`${start}px`, "0px"], opacity: [1, 0] },
+        { duration: 0.18, ease: [0.4, 0, 0.6, 1] },
+      );
+    }
+  }
+
+  function flashCopySuccess(
+    btn: HTMLButtonElement,
+    label: string,
+    isError = false,
+  ): void {
+    btn.textContent = label;
+    btn.classList.remove("is-flash-success", "is-flash-error");
+    btn.classList.add(isError ? "is-flash-error" : "is-flash-success");
+    window.setTimeout(() => {
+      btn.textContent = "Copy store IDs";
+      btn.classList.remove("is-flash-success", "is-flash-error");
+    }, isError ? 1200 : 900);
   }
 
   function showSelectionInspector(
@@ -415,8 +511,8 @@ function init(): void {
   ): void {
     const stores = selection.stores;
     selectedStoreIds = stores;
+    const wasHidden = inspector.hidden;
     inspector.hidden = false;
-    inspector.open = true;
     inspectorSummary.textContent =
       `${selection.count} stores · ${viewLabel} · ${selection.label}`;
     inspectorMeta.textContent =
@@ -428,9 +524,30 @@ function init(): void {
     if (stores.length > MAX_VISIBLE_STORE_IDS) {
       inspectorStoreList.textContent =
         `${lines}\n\n... +${stores.length - MAX_VISIBLE_STORE_IDS} more store IDs (copy to get full list).`;
-      return;
+    } else {
+      inspectorStoreList.textContent = lines;
     }
-    inspectorStoreList.textContent = lines;
+
+    // First reveal slides the panel up + open; subsequent selections only
+    // refresh content unless the user had collapsed it.
+    if (wasHidden) {
+      inspector.dataset.open = "false";
+      inspectorBody.style.height = "0px";
+      inspectorBody.style.opacity = "0";
+      void inspector.offsetHeight;
+      if (prefersReducedMotion()) {
+        setInspectorOpen(true, false);
+        return;
+      }
+      animate(
+        inspector,
+        { opacity: [0, 1], y: [8, 0] },
+        { duration: 0.22, ease: [0.2, 0.7, 0.2, 1] },
+      );
+      setInspectorOpen(true, true);
+    } else if (inspector.dataset.open !== "true") {
+      setInspectorOpen(true, true);
+    }
   }
 
   function syncExportButtons(isDual: boolean): void {
@@ -442,6 +559,21 @@ function init(): void {
   function rerender(): void {
     if (!state.parseResult) return;
     const pr = state.parseResult;
+
+    // Cross-fade: nudge old contents out, swap, fade new in. Skipped under
+    // prefers-reduced-motion so screenreaders / users with vestibular issues
+    // get an instant update.
+    if (!prefersReducedMotion()) {
+      const outgoingChildren = [...plotStack.children, ...captionStrip.children];
+      if (outgoingChildren.length > 0) {
+        animate(
+          outgoingChildren as Element[],
+          { opacity: [1, 0] },
+          { duration: 0.08, ease: "easeIn" },
+        );
+      }
+    }
+
     plotStack.replaceChildren();
     captionStrip.replaceChildren();
     clearSelectionInspector();
@@ -472,6 +604,7 @@ function init(): void {
         div.textContent = line;
         captionStrip.appendChild(div);
       }
+      fadeInPlotContents();
       return;
     }
 
@@ -534,7 +667,48 @@ function init(): void {
       capParams.appendChild(div);
     }
     captionStrip.appendChild(capParams);
+    fadeInPlotContents();
   }
+
+  function fadeInPlotContents(): void {
+    if (prefersReducedMotion()) return;
+    const incoming = [...plotStack.children, ...captionStrip.children];
+    if (incoming.length === 0) return;
+    animate(
+      incoming as Element[],
+      { opacity: [0, 1], y: [4, 0] },
+      { duration: 0.22, ease: "easeOut", delay: stagger(0.012) },
+    );
+  }
+
+  function runWorkbenchEntryAnimation(): void {
+    if (prefersReducedMotion()) return;
+    const targets = Array.from(
+      document.querySelectorAll<HTMLElement>(
+        "[data-stage='header'], [data-stage='left-1'], [data-stage='left-2'], [data-stage='left-3'], [data-stage='right']",
+      ),
+    );
+    if (targets.length === 0) return;
+    targets.forEach((el) => {
+      el.style.opacity = "0";
+      el.style.transform = "translateY(6px)";
+    });
+    animate(
+      targets,
+      { opacity: [0, 1], y: [6, 0] },
+      { duration: 0.32, ease: [0.2, 0.7, 0.2, 1], delay: stagger(0.05) },
+    ).finished.then(() => {
+      // Clear inline styles so subsequent transforms (e.g. sticky) aren't capped.
+      targets.forEach((el) => {
+        el.style.removeProperty("opacity");
+        el.style.removeProperty("transform");
+      });
+    });
+  }
+}
+
+function prefersReducedMotion(): boolean {
+  return window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 }
 
 function initLandingHero(): void {

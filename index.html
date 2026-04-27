@@ -57,7 +57,7 @@
     </div>
 
     <div id="app" hidden>
-      <header class="app-header">
+      <header class="app-header" data-stage="header">
         <div class="header-brand">
           <div class="header-flag-wrap" id="header-flag-wrap" hidden>
             <img
@@ -96,65 +96,86 @@
 
       <main class="app-main">
         <section class="left-pane">
-          <h2>1. Input YAML</h2>
-          <div class="sample-row">
-            <label for="sample-picker">Load sample:</label>
-            <select id="sample-picker"></select>
-            <button id="load-file-btn" type="button">Load file&hellip;</button>
-            <input
-              id="file-input"
-              type="file"
-              accept=".yaml,.yml,.txt"
-              hidden
-            />
-          </div>
-          <textarea
-            id="yaml-input"
-            spellcheck="false"
-            aria-label="Paste YAML here"
-            placeholder="Paste YAML per public/schema.md, or load the UK sample from the dropdown."
-          ></textarea>
-          <div id="parse-banner" class="banner" role="alert" hidden></div>
-
-          <h2>2. Trim &amp; sort</h2>
-          <p class="muted small controls-trim-lede">
-            With real extracts, Top-N sets is usually the control that matters
-            first: it limits how many set rows appear (matrix height). Top-N
-            intersections caps columns when the bundle long tail explodes; min
-            size filters noise rows. When the YAML is dual (<code>menu_sets</code> +
-            <code>parameters</code> per row), the lower chart is the <strong>features</strong>
-            view; the same controls apply to both charts.
-          </p>
-          <div class="controls-grid" id="controls-grid">
-            <!-- Controls injected by controls.ts -->
+          <div class="left-section" data-stage="left-1">
+            <h2>1. Input YAML</h2>
+            <div class="sample-row">
+              <label for="sample-picker">Load sample</label>
+              <select id="sample-picker"></select>
+              <button id="load-file-btn" type="button">Load file&hellip;</button>
+              <input
+                id="file-input"
+                type="file"
+                accept=".yaml,.yml,.txt"
+                hidden
+              />
+            </div>
+            <div
+              id="yaml-input-host"
+              class="yaml-editor-host"
+              aria-label="YAML input editor"
+            ></div>
+            <div id="parse-banner" class="banner" role="alert" hidden></div>
           </div>
 
-          <h2>3. Export</h2>
-          <div class="export-row export-row-multi">
-            <button id="download-svg" type="button">Download SVG</button>
-            <button id="download-svg-menu" type="button" hidden>
-              Download menu-sets SVG
-            </button>
-            <button id="download-svg-params" type="button" hidden>
-              Download features SVG
-            </button>
-            <span class="muted small" id="export-note"
-              >Dual YAML: two SVGs. Single: one SVG. PNG export is Phase 2.</span
-            >
+          <div class="left-section" data-stage="left-2">
+            <h2>2. Trim &amp; sort</h2>
+            <p class="muted small controls-trim-lede">
+              With real extracts, Top-N sets is usually the control that matters
+              first: it limits how many set rows appear (matrix height). Top-N
+              intersections caps columns when the bundle long tail explodes; min
+              size filters noise rows. When the YAML is dual (<code>menu_sets</code>
+              + <code>parameters</code> per row), the lower chart is the
+              <strong>features</strong> view; the same controls apply to both charts.
+            </p>
+            <div class="controls-grid" id="controls-grid">
+              <!-- Controls injected by controls.ts -->
+            </div>
+          </div>
+
+          <div class="left-section" data-stage="left-3">
+            <h2>3. Export</h2>
+            <div class="export-row export-row-multi">
+              <button id="download-svg" type="button">Download SVG</button>
+              <button id="download-svg-menu" type="button" hidden>
+                Download menu-sets SVG
+              </button>
+              <button id="download-svg-params" type="button" hidden>
+                Download features SVG
+              </button>
+              <span class="muted small" id="export-note"
+                >Dual YAML: two SVGs. Single: one SVG. PNG export is Phase 2.</span
+              >
+            </div>
           </div>
         </section>
 
-        <section class="right-pane">
+        <section class="right-pane" data-stage="right">
           <div id="plot-stack" class="plot-stack"></div>
           <div id="caption-strip" class="caption-strip" aria-live="polite"></div>
-          <details id="selection-inspector" class="selection-inspector" hidden>
-            <summary id="selection-summary">Selection inspector</summary>
-            <div class="selection-meta" id="selection-meta"></div>
-            <div class="selection-actions">
-              <button id="selection-copy" type="button">Copy store IDs</button>
+          <section
+            id="selection-inspector"
+            class="selection-inspector"
+            aria-live="polite"
+            hidden
+          >
+            <button
+              id="selection-toggle"
+              type="button"
+              class="selection-toggle"
+              aria-expanded="true"
+              aria-controls="selection-body"
+            >
+              <span class="selection-caret" aria-hidden="true"></span>
+              <span id="selection-summary">Selection inspector</span>
+            </button>
+            <div id="selection-body" class="selection-body">
+              <div class="selection-meta" id="selection-meta"></div>
+              <div class="selection-actions">
+                <button id="selection-copy" type="button">Copy store IDs</button>
+              </div>
+              <pre id="selection-store-list" class="selection-store-list"></pre>
             </div>
-            <pre id="selection-store-list" class="selection-store-list"></pre>
-          </details>
+          </section>
         </section>
       </main>
 

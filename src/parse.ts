@@ -22,10 +22,20 @@ const DIMENSION_KINDS: ReadonlySet<DimensionKind> = new Set([
   "dual",
 ]);
 
+export interface ParsePosition {
+  /** 0-indexed line in the source text. */
+  line: number;
+  /** 0-indexed column on that line. */
+  column: number;
+}
+
 export class ParseError extends Error {
-  constructor(message: string) {
+  /** Source position the error refers to, if known (js-yaml mark or schema check). */
+  position?: ParsePosition;
+  constructor(message: string, position?: ParsePosition) {
     super(message);
     this.name = "ParseError";
+    this.position = position;
   }
 }
 
@@ -49,7 +59,13 @@ export function parseInput(text: string): ParseResult {
     raw = yaml.load(text);
   } catch (err) {
     const detail = err instanceof Error ? err.message : String(err);
-    throw new ParseError(`YAML parse error: ${detail}`);
+    const mark = (err as { mark?: { line?: number; column?: number } } | null)
+      ?.mark;
+    const position =
+      mark && typeof mark.line === "number" && typeof mark.column === "number"
+        ? { line: mark.line, column: mark.column }
+        : undefined;
+    throw new ParseError(`YAML parse error: ${detail}`, position);
   }
 
   if (raw == null || typeof raw !== "object" || Array.isArray(raw)) {
