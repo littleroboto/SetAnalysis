@@ -1,0 +1,37 @@
+{
+  "name": "rfm-upset-workbench",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Static UpSet-style workbench for RFM Phase 1 estate variance discovery. See ../analysis/PROMPT-build-upset-workbench.md.",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "gen:uk-passb": "tsx src/samples/_generators/uk_passb.ts",
+    "gen:de-passb": "tsx src/samples/_generators/de_passb.ts",
+    "gen:pl-passb": "tsx src/samples/_generators/pl_passb.ts",
+    "gen:nl-passb": "tsx src/samples/_generators/nl_passb.ts",
+    "gen:uk-params-passb": "tsx src/samples/_generators/uk_params_passb.ts",
+    "gen:pl-params-passb": "tsx src/samples/_generators/pl_params_passb.ts",
+    "gen:uk-dual-passb": "tsx src/samples/_generators/uk_dual_passb.ts",
+    "gen:de-dual-passb": "tsx src/samples/_generators/de_dual_passb.ts",
+    "gen:pl-dual-passb": "tsx src/samples/_generators/pl_dual_passb.ts",
+    "gen:nl-dual-passb": "tsx src/samples/_generators/nl_dual_passb.ts"
+  },
+  "dependencies": {
+    "js-yaml": "^4.1.1"
+  },
+  "devDependencies": {
+    "@types/js-yaml": "^4.0.9",
+    "@types/node": "^25.6.0",
+    "jsdom": "^29.0.2",
+    "tsx": "^4.21.0",
+    "typescript": "^6.0.3",
+    "vite": "^8.0.10",
+    "vitest": "^4.1.5"
+  },
+  "packageManager": "pnpm@10.28.0+sha512.05df71d1421f21399e053fde567cea34d446fa02c76571441bfc1c7956e98e363088982d940465fd34480d4d90a0668bc12362f8aa88000a64e83d0b0e47be48"
+}

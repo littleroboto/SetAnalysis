@@ -1,0 +1,4574 @@
+# nl_dual_passb.ts
+meta:
+  market: NL
+  snapshot: '2026-04-24'
+  dimension: dual
+  source: viz/upset-tool/src/samples/synthetic-nl-dual-passb.yaml
+  evidence: input_config
+  notes: 'Synthetic NL dual: menu-set names align with nl_menu_sets.tsv catalog; parameters are compact fiction. 270 stores. Seed 0x4e4c0003. Fiction.'
+elements:
+  - id: '31000000'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000001'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000002'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000003'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000004'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000005'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000006'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000007'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000008'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000009'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000010'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000011'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000012'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000013'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000014'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000015'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000016'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000017'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000018'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000019'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000020'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000021'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000022'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000023'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000024'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000025'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000026'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000027'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000028'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000029'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000030'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000031'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000032'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000033'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000034'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000035'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000036'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000037'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000038'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000039'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000040'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000041'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000042'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000043'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000044'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000045'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000046'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000047'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000048'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000049'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000050'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000051'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000052'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000053'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000054'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000055'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000056'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000057'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000058'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000059'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000060'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000061'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000062'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000063'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000064'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000065'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000066'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000067'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000068'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000069'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000070'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000071'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000072'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000073'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000074'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000075'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000076'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000077'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000078'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000079'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000080'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000081'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000082'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000083'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000084'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000085'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000086'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000087'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000088'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000089'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000090'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000091'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000092'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000093'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000094'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000095'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000096'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000097'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000098'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000099'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000100'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000101'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000102'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000103'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000104'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000105'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000106'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000107'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000108'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000109'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000110'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000111'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000112'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000113'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000114'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000115'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000116'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000117'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000118'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000119'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000120'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000121'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000122'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000123'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000124'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000125'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000126'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000127'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000128'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000129'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000130'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000131'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000132'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000133'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000134'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000135'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000136'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000137'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000138'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000139'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000140'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000141'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000142'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000143'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000144'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000145'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000146'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000147'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000148'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000149'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000150'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000151'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000152'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000153'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000154'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000155'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000156'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000157'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000158'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000159'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000160'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000161'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000162'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000163'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000164'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000165'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000166'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000167'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000168'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000169'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000170'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000171'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000172'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000173'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000174'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000175'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000176'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000177'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000178'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000179'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000180'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000181'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000182'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000183'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000184'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000185'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000186'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000187'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000188'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000189'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000190'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000191'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000192'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000193'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000194'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000195'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000196'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000197'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000198'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000199'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000200'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000201'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000202'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000203'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000204'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000205'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000206'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000207'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000208'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000209'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000210'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000211'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000212'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000213'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000214'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000215'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000216'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000217'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000218'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000219'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000220'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000221'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000222'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000223'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000224'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000225'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000226'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000227'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000228'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000229'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000230'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000231'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000232'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000233'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000234'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000235'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000236'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000237'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000238'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000239'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - ODMB
+      - Menu Item Set - Pimp Je Burger
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: NL_core_standard
+  - id: '31000240'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - Schiphol
+      - Menu Item Set - McBreak + Fris
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - CUST_NL_Schiphol_Profile
+    attrs:
+      archetype: NL_schiphol_cluster
+  - id: '31000241'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - Schiphol
+      - Menu Item Set - McBreak + Fris
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - CUST_NL_Schiphol_Profile
+    attrs:
+      archetype: NL_schiphol_cluster
+  - id: '31000242'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - Schiphol
+      - Menu Item Set - McBreak + Fris
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - CUST_NL_Schiphol_Profile
+    attrs:
+      archetype: NL_schiphol_cluster
+  - id: '31000243'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - Schiphol
+      - Menu Item Set - McBreak + Fris
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - CUST_NL_Schiphol_Profile
+    attrs:
+      archetype: NL_schiphol_cluster
+  - id: '31000244'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - Schiphol
+      - Menu Item Set - McBreak + Fris
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - CUST_NL_Schiphol_Profile
+    attrs:
+      archetype: NL_schiphol_cluster
+  - id: '31000245'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - Schiphol
+      - Menu Item Set - McBreak + Fris
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - CUST_NL_Schiphol_Profile
+    attrs:
+      archetype: NL_schiphol_cluster
+  - id: '31000246'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - Schiphol
+      - Menu Item Set - McBreak + Fris
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - CUST_NL_Schiphol_Profile
+    attrs:
+      archetype: NL_schiphol_cluster
+  - id: '31000247'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - Schiphol
+      - Menu Item Set - McBreak + Fris
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - CUST_NL_Schiphol_Profile
+    attrs:
+      archetype: NL_schiphol_cluster
+  - id: '31000248'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - Schiphol
+      - Menu Item Set - McBreak + Fris
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - CUST_NL_Schiphol_Profile
+    attrs:
+      archetype: NL_schiphol_cluster
+  - id: '31000249'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - Schiphol
+      - Menu Item Set - McBreak + Fris
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - CUST_NL_Schiphol_Profile
+    attrs:
+      archetype: NL_schiphol_cluster
+  - id: '31000250'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - Schiphol
+      - Menu Item Set - McBreak + Fris
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - CUST_NL_Schiphol_Profile
+    attrs:
+      archetype: NL_schiphol_cluster
+  - id: '31000251'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - Schiphol
+      - Menu Item Set - McBreak + Fris
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - CUST_NL_Schiphol_Profile
+    attrs:
+      archetype: NL_schiphol_cluster
+  - id: '31000252'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - Schiphol
+      - Menu Item Set - McBreak + Fris
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - CUST_NL_Schiphol_Profile
+    attrs:
+      archetype: NL_schiphol_cluster
+  - id: '31000253'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Bottle Deposit
+      - Menu Item Set - Schiphol
+      - Menu Item Set - McBreak + Fris
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_Deposit
+      - CUST_NL_Schiphol_Profile
+    attrs:
+      archetype: NL_schiphol_cluster
+  - id: '31000254'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Menu Item Set - Hot Choco
+      - Menu Item Set - Salad Bar
+      - Bottle Deposit
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - CUST_NL_Lab_Flag
+    attrs:
+      archetype: NL_cafe_snack_forward
+  - id: '31000255'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Menu Item Set - Hot Choco
+      - Menu Item Set - Salad Bar
+      - Bottle Deposit
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - CUST_NL_Lab_Flag
+    attrs:
+      archetype: NL_cafe_snack_forward
+  - id: '31000256'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Menu Item Set - Hot Choco
+      - Menu Item Set - Salad Bar
+      - Bottle Deposit
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - CUST_NL_Lab_Flag
+    attrs:
+      archetype: NL_cafe_snack_forward
+  - id: '31000257'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Menu Item Set - Hot Choco
+      - Menu Item Set - Salad Bar
+      - Bottle Deposit
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - CUST_NL_Lab_Flag
+    attrs:
+      archetype: NL_cafe_snack_forward
+  - id: '31000258'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Menu Item Set - Hot Choco
+      - Menu Item Set - Salad Bar
+      - Bottle Deposit
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - CUST_NL_Lab_Flag
+    attrs:
+      archetype: NL_cafe_snack_forward
+  - id: '31000259'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Menu Item Set - Hot Choco
+      - Menu Item Set - Salad Bar
+      - Bottle Deposit
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - CUST_NL_Lab_Flag
+    attrs:
+      archetype: NL_cafe_snack_forward
+  - id: '31000260'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Menu Item Set - Hot Choco
+      - Menu Item Set - Salad Bar
+      - Bottle Deposit
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - CUST_NL_Lab_Flag
+    attrs:
+      archetype: NL_cafe_snack_forward
+  - id: '31000261'
+    menu_sets:
+      - Menu Item Set - Netherlands
+      - Menu Item Set - McCafé
+      - Menu Item Set - Hot Choco
+      - Menu Item Set - Salad Bar
+      - Bottle Deposit
+    parameters:
+      - SYS_NL_POS_Core
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - CUST_NL_Lab_Flag
+    attrs:
+      archetype: NL_cafe_snack_forward
+  - id: '31000262'
+    menu_sets:
+      - Bottle Deposit
+      - Menu Item Set - Hot Choco
+      - Menu Item Set - McCafé
+      - Menu Item Set - Salad Bar
+    parameters:
+      - CUST_NL_Lab_Flag
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_POS_Core
+    attrs:
+      archetype: long_tail
+      derived_from: NL_cafe_snack_forward
+  - id: '31000263'
+    menu_sets:
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - McCafé
+      - Menu Item Set - Netherlands
+      - Menu Item Set - PI \ Platform Integration
+      - Menu Item Set - Schiphol
+    parameters:
+      - CUST_NL_Schiphol_Profile
+      - SYS_NL_Deposit
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_POS_Core
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: long_tail
+      derived_from: NL_schiphol_cluster
+  - id: '31000264'
+    menu_sets:
+      - Bottle Deposit
+      - Menu Item Set - Hot Choco
+      - Menu Item Set - McCafé
+      - Menu Item Set - McDelivery Test
+      - Menu Item Set - Netherlands
+      - Menu Item Set - Salad Bar
+    parameters:
+      - CUST_NL_Lab_Flag
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_POS_Core
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: long_tail
+      derived_from: NL_cafe_snack_forward
+  - id: '31000265'
+    menu_sets:
+      - Bottle Deposit
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - McCafé
+      - Menu Item Set - McDelivery Test
+      - Menu Item Set - Netherlands
+      - Menu Item Set - Schiphol
+    parameters:
+      - CUST_NL_Schiphol_Profile
+      - SYS_NL_Deposit
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_POS_Core
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: long_tail
+      derived_from: NL_schiphol_cluster
+  - id: '31000266'
+    menu_sets:
+      - Bottle Deposit
+      - Menu Item Set - Lab testing
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - McCafé
+      - Menu Item Set - Netherlands
+      - Menu Item Set - Schiphol
+    parameters:
+      - CUST_NL_Schiphol_Profile
+      - SYS_NL_Deposit
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_POS_Core
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: long_tail
+      derived_from: NL_schiphol_cluster
+  - id: '31000267'
+    menu_sets:
+      - Bottle Deposit
+      - Menu Item Set - Hot Choco
+      - Menu Item Set - McCafé
+      - Menu Item Set - Netherlands
+      - Menu Item Set - Salad Bar
+      - Menu Item Set - Schiphol
+    parameters:
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_POS_Core
+    attrs:
+      archetype: long_tail
+      derived_from: NL_cafe_snack_forward
+  - id: '31000268'
+    menu_sets:
+      - Bottle Deposit
+      - Menu Item Set - Condimenten test
+      - Menu Item Set - Hot Choco
+      - Menu Item Set - McCafé
+      - Menu Item Set - Netherlands
+      - Menu Item Set - Salad Bar
+    parameters:
+      - CUST_NL_Lab_Flag
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_POS_Core
+    attrs:
+      archetype: long_tail
+      derived_from: NL_cafe_snack_forward
+  - id: '31000269'
+    menu_sets:
+      - Bottle Deposit
+      - Menu Item Set - Maestro Egg
+      - Menu Item Set - McBreak + Fris
+      - Menu Item Set - McCafé
+      - Menu Item Set - Netherlands
+      - Menu Item Set - Schiphol
+      - TDB - Menu Item Set - Renske van Mameren
+    parameters:
+      - CUST_NL_Schiphol_Profile
+      - SYS_NL_Deposit
+      - SYS_NL_Kitchen_STD
+      - SYS_NL_McCafe_Route
+      - SYS_NL_ODMB
+      - SYS_NL_POS_Core
+      - SYS_NL_VAT_Reporting
+    attrs:
+      archetype: long_tail
+      derived_from: NL_schiphol_cluster
