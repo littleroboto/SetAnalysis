@@ -20,7 +20,6 @@ import { downloadSvg } from "./export";
 import {
   DEFAULT_RENDER_OPTIONS,
   type ParseResult,
-  type ParsedInput,
   type RenderOptions,
 } from "./types";
 import {
@@ -28,7 +27,8 @@ import {
   formatDimensionLabel,
   syncHeaderBrand,
 } from "./header-brand";
-import { animate, inView, stagger } from "motion";
+import { animate, stagger } from "motion";
+import { initLandingHero } from "./landing-hero";
 import {
   mountYamlEditor,
   lineColumnToOffset,
@@ -216,22 +216,18 @@ function init(): void {
   const openWorkbenchTop = document.getElementById("open-workbench-link-top") as
     | HTMLAnchorElement
     | null;
-  const openWorkbenchMain = document.getElementById("open-workbench-link-main") as
-    | HTMLAnchorElement
-    | null;
   const backToLanding = document.getElementById("back-to-landing-link") as
     | HTMLAnchorElement
     | null;
 
   const workbenchHref = buildWorkbenchHref();
   if (openWorkbenchTop) openWorkbenchTop.href = workbenchHref;
-  if (openWorkbenchMain) openWorkbenchMain.href = workbenchHref;
   if (backToLanding) backToLanding.href = buildLandingHref();
 
   if (!workbenchViewEnabled()) {
     if (landingRoot) landingRoot.hidden = false;
     if (appRoot) appRoot.hidden = true;
-    initLandingHero();
+    initLandingHero({ yaml: ukDualPassBYaml, demoMode: demoModeEnabled() });
     return;
   }
 
@@ -762,141 +758,6 @@ function init(): void {
 
 function prefersReducedMotion(): boolean {
   return window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-}
-
-/**
- * Build a hero-only ParsedInput where each original set name is replaced with
- * a numbered placeholder ("Menu #1" for menu-set inputs, "Feature #1" for
- * feature/parameter inputs) ranked by occurrence (largest first), and the
- * meta is scrubbed of market / source identifiers. Caller still strips the
- * figure-header from the rendered SVG so no market chrome leaks into the
- * visual.
- */
-function anonymiseHeroInput(src: ParsedInput): ParsedInput {
-  const labelPrefix =
-    src.meta.dimension === "features" || src.meta.dimension === "parameters"
-      ? "Feature"
-      : "Menu";
-
-  const counts = new Map<string, number>();
-  for (const el of src.elements) {
-    for (const s of el.sets) {
-      counts.set(s, (counts.get(s) ?? 0) + 1);
-    }
-  }
-  const ranked = Array.from(counts.entries())
-    .sort((a, b) => b[1] - a[1] || (a[0] < b[0] ? -1 : 1))
-    .map(([name], i) => [name, `${labelPrefix} #${i + 1}`] as const);
-  const rename = new Map(ranked);
-
-  return {
-    meta: {
-      market: "Demo",
-      snapshot: src.meta.snapshot,
-      dimension: src.meta.dimension,
-      source: "synthetic",
-      evidence: src.meta.evidence,
-    },
-    elements: src.elements.map((el) => ({
-      id: el.id,
-      sets: el.sets.map((s) => rename.get(s) ?? s),
-      attrs: el.attrs,
-    })),
-  };
-}
-
-function initLandingHero(): void {
-  const host = document.getElementById("landing-hero-chart");
-  if (!host) return;
-  host.replaceChildren();
-
-  let parsed: ParseResult;
-  try {
-    parsed = parseInput(ukDualPassBYaml);
-  } catch {
-    return;
-  }
-
-  const rawInput =
-    parsed.kind === "dual" ? parsed.menuSets : parsed.kind === "single" ? parsed.parsed : undefined;
-  if (!rawInput) return;
-
-  // Without demo mode, anonymise the data shape so the hero illustrates the
-  // *visual idea* of UpSet without leaking the bundled estate names. We rank
-  // sets by occurrence and rename them Menu #1 (largest) … Menu #N.
-  const demoMode = demoModeEnabled();
-  const input = demoMode ? rawInput : anonymiseHeroInput(rawInput);
-
-  const summary = extractCombinations(input.elements);
-  const heroOptions: RenderOptions = {
-    ...DEFAULT_RENDER_OPTIONS,
-    topNSets: 8,
-    topNCombinations: 14,
-    minCombinationSize: 8,
-    otherRollup: true,
-    hideEmptyIntersection: true,
-    sortMode: "size_desc",
-  };
-
-  const result = renderUpset(
-    host,
-    input.meta,
-    input.elements.length,
-    summary,
-    heroOptions,
-  );
-
-  if (!demoMode) {
-    // Strip the figure header (flag + "Market · dimension") so the hero shows
-    // only the bars / dots / labels — no market identification.
-    result.svg.querySelectorAll(".figure-header").forEach((g) => g.remove());
-  }
-  result.svg.removeAttribute("width");
-  result.svg.removeAttribute("height");
-  result.svg.setAttribute("preserveAspectRatio", "xMidYMid meet");
-
-  const topBars = Array.from(
-    result.svg.querySelectorAll<SVGElement>(".combo-bar"),
-  );
-  const setBars = Array.from(
-    result.svg.querySelectorAll<SVGElement>(".set-bar"),
-  );
-  const onDots = Array.from(
-    result.svg.querySelectorAll<SVGElement>(".dot-on"),
-  );
-
-  // Set transform-origins inline so transforms scale from a sensible anchor;
-  // initial opacity is held to 0 via .is-prereveal until inView fires.
-  topBars.forEach((el) => {
-    el.style.transformOrigin = "50% 100%";
-  });
-  setBars.forEach((el) => {
-    el.style.transformOrigin = "100% 50%";
-  });
-  host.classList.add("is-prereveal");
-
-  inView(host, () => {
-    host.classList.remove("is-prereveal");
-    animate(
-      topBars,
-      { opacity: [0, 1], scaleY: [0.05, 1] },
-      { duration: 0.75, ease: "easeOut", delay: stagger(0.02) },
-    );
-    animate(
-      setBars,
-      { opacity: [0, 1], scaleX: [0.08, 1] },
-      { duration: 0.7, ease: "easeOut", delay: stagger(0.015) },
-    );
-    animate(
-      onDots,
-      { opacity: [0, 1], scale: [0.25, 1] },
-      {
-        duration: 0.45,
-        ease: "easeOut",
-        delay: stagger(0.003, { startDelay: 0.2 }),
-      },
-    );
-  });
 }
 
 function flashBanner(

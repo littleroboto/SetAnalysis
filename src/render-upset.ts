@@ -28,6 +28,13 @@ export interface RenderResult {
   svg: SVGSVGElement;
   trim: TrimSummary;
   captionLines: string[];
+  /**
+   * Combinations rendered as `.combo-bar` columns, in left-to-right order.
+   * Lines up 1:1 with `svg.querySelectorAll(".combo-bar:not(.combo-bar-other)")`.
+   * Used by callers (e.g. the landing hero demo) that need to drive an
+   * interaction against a known column without re-deriving the trim pipeline.
+   */
+  shownCombinations: Combination[];
 }
 
 export type DrilldownSelectionType = "combination" | "set" | "other";
@@ -585,6 +592,7 @@ export function renderUpset(
       otherStoresCount: trimmed.otherBucket?.totalSize ?? 0,
     },
     captionLines,
+    shownCombinations: trimmed.shownCombinations,
   };
 }
 
