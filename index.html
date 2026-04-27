@@ -96,8 +96,51 @@
 
       <main class="app-main">
         <section class="left-pane">
-          <div class="left-section" data-stage="left-1">
-            <h2>1. Input YAML</h2>
+          <div class="left-section" data-stage="left-1" data-expanded="false">
+            <div class="section-heading">
+              <h2>1. Input YAML</h2>
+              <button
+                id="yaml-expand-btn"
+                type="button"
+                class="icon-btn yaml-expand-btn"
+                aria-pressed="false"
+                aria-label="Expand editor"
+                title="Expand editor"
+              >
+                <svg
+                  class="icon-expand"
+                  width="14"
+                  height="14"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M2 6V2h4M14 6V2h-4M2 10v4h4M14 10v4h-4"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                <svg
+                  class="icon-collapse"
+                  width="14"
+                  height="14"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M6 2v4H2M10 2v4h4M6 14v-4H2M10 14v-4h4"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+            </div>
             <div class="sample-row">
               <label for="sample-picker">Load sample</label>
               <select id="sample-picker"></select>

@@ -269,6 +269,56 @@ body {
   opacity: 0.85;
 }
 
+.section-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+.section-heading h2 {
+  flex: 1;
+  margin: 0;
+}
+.icon-btn {
+  background: #fff;
+  border: 1px solid var(--border);
+  color: var(--muted);
+  width: 26px;
+  height: 26px;
+  padding: 0;
+  border-radius: 4px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition:
+    background-color 120ms ease,
+    color 120ms ease,
+    border-color 120ms ease;
+}
+.icon-btn:hover {
+  background: #f3f4f6;
+  color: var(--text);
+}
+.icon-btn:focus-visible {
+  outline: 2px solid #2563eb;
+  outline-offset: 2px;
+}
+.icon-btn[aria-pressed="true"] {
+  background: var(--text);
+  border-color: var(--text);
+  color: #fff;
+}
+.icon-btn .icon-collapse {
+  display: none;
+}
+.icon-btn[aria-pressed="true"] .icon-expand {
+  display: none;
+}
+.icon-btn[aria-pressed="true"] .icon-collapse {
+  display: block;
+}
+
 .sample-row {
   display: flex;
   gap: 6px;
@@ -300,12 +350,24 @@ body {
      pushing the controls off-screen. CM6 manages its own internal scroll. */
   display: block;
   min-height: 220px;
+  /* Smooth height transitions when toggling the expand control. */
+  transition: height 220ms cubic-bezier(0.2, 0.7, 0.2, 1);
 }
 .yaml-editor-host .cm-editor {
   height: 240px;
+  transition: height 220ms cubic-bezier(0.2, 0.7, 0.2, 1);
 }
 .yaml-editor-host .cm-scroller {
   overflow: auto;
+}
+/* Expanded mode: editor takes most of the viewport so it's a real workable
+   size for editing larger YAML payloads. The sticky left rail still scrolls
+   the rest of the controls below it. */
+.left-section[data-expanded="true"] .yaml-editor-host .cm-editor {
+  height: min(72vh, 720px);
+}
+.left-section[data-expanded="true"] .yaml-editor-host {
+  min-height: min(72vh, 720px);
 }
 
 .banner {

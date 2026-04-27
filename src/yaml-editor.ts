@@ -27,10 +27,11 @@ import {
   foldKeymap,
   indentOnInput,
   syntaxHighlighting,
-  defaultHighlightStyle,
+  HighlightStyle,
 } from "@codemirror/language";
 import { yaml } from "@codemirror/lang-yaml";
 import { lintGutter, setDiagnostics, type Diagnostic } from "@codemirror/lint";
+import { tags as t } from "@lezer/highlight";
 
 export interface YamlEditorMountOptions {
   /** Initial document body. */
@@ -52,22 +53,62 @@ export interface YamlEditorHandle {
 }
 
 /**
- * Light theme tuned to match the workbench's neutral palette:
- * white panel, subtle gutter, no chrome that competes with the diagram.
+ * Dark theme tuned to sit cleanly inside the otherwise-light workbench:
+ * cool slate panel, low-contrast gutter, syntax tones picked from the
+ * "one dark" family so YAML keys / values / comments are easy to scan.
  */
+const PALETTE = {
+  bg: "#1e2128",
+  bgGutter: "#191c22",
+  bgActive: "#262a32",
+  bgSelection: "#3b4252",
+  bgSelectionMatch: "rgb(255 255 255 / 0.06)",
+  border: "#30343c",
+  borderFocus: "#4b5263",
+  text: "#dbe0e8",
+  textMuted: "#7a8290",
+  caret: "#d7dae0",
+  // Syntax accents (one-dark inspired, slightly desaturated for neutrality).
+  comment: "#6c7383",
+  key: "#7aa2f7",
+  string: "#9ece6a",
+  number: "#e0af68",
+  bool: "#bb9af7",
+  punct: "#9aa1ad",
+  meta: "#73daca",
+  invalid: "#f7768e",
+};
+
+const workbenchHighlight = HighlightStyle.define([
+  { tag: t.comment, color: PALETTE.comment, fontStyle: "italic" },
+  { tag: t.lineComment, color: PALETTE.comment, fontStyle: "italic" },
+  { tag: t.blockComment, color: PALETTE.comment, fontStyle: "italic" },
+  { tag: [t.propertyName, t.definition(t.propertyName)], color: PALETTE.key, fontWeight: "500" },
+  { tag: t.string, color: PALETTE.string },
+  { tag: t.number, color: PALETTE.number },
+  { tag: t.bool, color: PALETTE.bool },
+  { tag: t.null, color: PALETTE.bool },
+  { tag: t.keyword, color: PALETTE.bool },
+  { tag: t.atom, color: PALETTE.bool },
+  { tag: t.meta, color: PALETTE.meta },
+  { tag: t.punctuation, color: PALETTE.punct },
+  { tag: t.bracket, color: PALETTE.punct },
+  { tag: t.invalid, color: PALETTE.invalid },
+]);
+
 const workbenchTheme = EditorView.theme(
   {
     "&": {
       fontSize: "12px",
-      backgroundColor: "#ffffff",
-      color: "#171717",
+      backgroundColor: PALETTE.bg,
+      color: PALETTE.text,
       borderRadius: "6px",
-      border: "1px solid #e5e5e5",
+      border: `1px solid ${PALETTE.border}`,
     },
     "&.cm-focused": {
       outline: "none",
-      borderColor: "#9ca3af",
-      boxShadow: "0 0 0 3px rgb(23 23 23 / 0.06)",
+      borderColor: PALETTE.borderFocus,
+      boxShadow: "0 0 0 3px rgb(122 162 247 / 0.18)",
     },
     ".cm-scroller": {
       fontFamily: "ui-monospace, SFMono-Regular, Menlo, monospace",
@@ -75,68 +116,100 @@ const workbenchTheme = EditorView.theme(
     },
     ".cm-content": {
       padding: "8px 4px",
-      caretColor: "#171717",
+      caretColor: PALETTE.caret,
     },
     ".cm-gutters": {
-      backgroundColor: "#fafafa",
-      color: "#a3a3a3",
-      borderRight: "1px solid #ececec",
+      backgroundColor: PALETTE.bgGutter,
+      color: PALETTE.textMuted,
+      border: "none",
+      borderRight: `1px solid ${PALETTE.border}`,
     },
     ".cm-activeLineGutter": {
-      backgroundColor: "#f3f4f6",
-      color: "#525252",
+      backgroundColor: PALETTE.bgActive,
+      color: PALETTE.text,
     },
     ".cm-activeLine": {
-      backgroundColor: "rgb(23 23 23 / 0.025)",
+      backgroundColor: "rgb(255 255 255 / 0.02)",
     },
     ".cm-selectionMatch": {
-      backgroundColor: "rgb(23 23 23 / 0.08)",
+      backgroundColor: PALETTE.bgSelectionMatch,
     },
-    "&.cm-focused .cm-selectionBackground, ::selection": {
-      backgroundColor: "rgb(37 99 235 / 0.18)",
-    },
-    ".cm-cursor": {
-      borderLeftColor: "#171717",
+    "&.cm-focused > .cm-scroller > .cm-selectionLayer .cm-selectionBackground, .cm-selectionBackground, ::selection":
+      {
+        backgroundColor: PALETTE.bgSelection,
+      },
+    ".cm-cursor, .cm-dropCursor": {
+      borderLeftColor: PALETTE.caret,
     },
     ".cm-lineNumbers .cm-gutterElement": {
-      padding: "0 6px 0 8px",
+      padding: "0 8px 0 10px",
     },
     ".cm-foldPlaceholder": {
-      backgroundColor: "#f3f4f6",
-      color: "#525252",
-      border: "1px solid #e5e5e5",
+      backgroundColor: PALETTE.bgActive,
+      color: PALETTE.text,
+      border: `1px solid ${PALETTE.border}`,
       padding: "0 4px",
       borderRadius: "3px",
     },
     ".cm-tooltip": {
-      border: "1px solid #e5e5e5",
-      backgroundColor: "#ffffff",
+      border: `1px solid ${PALETTE.border}`,
+      backgroundColor: PALETTE.bgActive,
+      color: PALETTE.text,
       borderRadius: "4px",
-      boxShadow: "0 4px 14px rgb(0 0 0 / 0.06)",
+      boxShadow: "0 4px 14px rgb(0 0 0 / 0.4)",
     },
     ".cm-tooltip .cm-diagnostic": {
       padding: "6px 10px",
       fontFamily: "system-ui, -apple-system, sans-serif",
       fontSize: "12px",
+      color: PALETTE.text,
+    },
+    ".cm-tooltip-autocomplete > ul > li[aria-selected]": {
+      backgroundColor: PALETTE.bgSelection,
+      color: PALETTE.text,
     },
     ".cm-diagnostic-error": {
-      borderLeftColor: "#b53030",
+      borderLeftColor: "#f87171",
     },
     ".cm-diagnostic-warning": {
-      borderLeftColor: "#b08800",
+      borderLeftColor: "#fbbf24",
     },
     ".cm-lintRange-error": {
       backgroundImage: "none",
-      backgroundColor: "rgb(181 48 48 / 0.12)",
-      borderBottom: "2px wavy #b53030",
+      backgroundColor: "rgb(248 113 113 / 0.12)",
+      borderBottom: "2px wavy #f87171",
     },
     ".cm-lintRange-warning": {
       backgroundImage: "none",
-      backgroundColor: "rgb(176 136 0 / 0.12)",
-      borderBottom: "2px wavy #b08800",
+      backgroundColor: "rgb(251 191 36 / 0.12)",
+      borderBottom: "2px wavy #fbbf24",
+    },
+    ".cm-panels": {
+      backgroundColor: PALETTE.bgGutter,
+      color: PALETTE.text,
+      borderTop: `1px solid ${PALETTE.border}`,
+    },
+    ".cm-panels.cm-panels-top": {
+      borderBottom: `1px solid ${PALETTE.border}`,
+      borderTop: "none",
+    },
+    ".cm-panel input, .cm-panel button": {
+      backgroundColor: PALETTE.bg,
+      color: PALETTE.text,
+      border: `1px solid ${PALETTE.border}`,
+      borderRadius: "3px",
+    },
+    ".cm-panel button:hover": {
+      backgroundColor: PALETTE.bgActive,
+    },
+    ".cm-searchMatch": {
+      backgroundColor: "rgb(224 175 104 / 0.25)",
+    },
+    ".cm-searchMatch.cm-searchMatch-selected": {
+      backgroundColor: "rgb(224 175 104 / 0.45)",
     },
   },
-  { dark: false },
+  { dark: true },
 );
 
 /**
@@ -158,7 +231,7 @@ function buildExtensions(opts: {
     history(),
     highlightActiveLine(),
     highlightSelectionMatches(),
-    syntaxHighlighting(defaultHighlightStyle, { fallback: true }),
+    syntaxHighlighting(workbenchHighlight, { fallback: true }),
     yaml(),
     lintGutter(),
     search({ top: true }),

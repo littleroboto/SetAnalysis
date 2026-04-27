@@ -227,6 +227,8 @@ function init(): void {
   if (appRoot) appRoot.hidden = false;
 
   const yamlHost = $("yaml-input-host");
+  const yamlSection = yamlHost.closest<HTMLElement>(".left-section");
+  const yamlExpandBtn = $("yaml-expand-btn") as HTMLButtonElement;
   const banner = $("parse-banner");
   const plotStack = $("plot-stack");
   const captionStrip = $("caption-strip");
@@ -287,6 +289,22 @@ function init(): void {
   inspectorToggle.addEventListener("click", () => {
     const isOpen = inspector.dataset.open === "true";
     setInspectorOpen(!isOpen);
+  });
+
+  // YAML editor expand toggle: flips a data-expanded flag on the section so
+  // CSS can resize the CodeMirror panel; rAF gives layout a tick before
+  // requestMeasure so gutters/scrollbars realign cleanly.
+  yamlExpandBtn.addEventListener("click", () => {
+    if (!yamlSection) return;
+    const next = yamlSection.dataset.expanded !== "true";
+    yamlSection.dataset.expanded = String(next);
+    yamlExpandBtn.setAttribute("aria-pressed", String(next));
+    yamlExpandBtn.setAttribute(
+      "aria-label",
+      next ? "Collapse editor" : "Expand editor",
+    );
+    yamlExpandBtn.title = next ? "Collapse editor" : "Expand editor";
+    requestAnimationFrame(() => editor.view.requestMeasure());
   });
 
   const customOpt = document.createElement("option");
